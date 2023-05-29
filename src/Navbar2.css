@@ -21,6 +21,10 @@ h2 {
     font-weight: 700;
 }
 
+/* .menu {
+    display: none;
+} */
+
 .menu ul {
     display: flex;
     justify-content: space-around;
@@ -30,4 +34,49 @@ h2 {
     margin: 10px;
     font-size: 20px;
     color: black;
+}
+
+.ham-menu {
+    display: none;
+}
+
+
+@media (max-width: 998px) {
+
+    nav {
+        height: 7rem;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .ham-menu {
+        display: block;
+        position: relative;
+        z-index: 99;
+        color: blue;
+        font-size: 20px;
+    }
+
+    .mobile-menu {
+        background-color: white;
+        height: 20rem;
+        display: flex;
+        align-items: center;
+        padding-left: 3rem;
+        transition: all 2s linear;
+        transform-origin: top;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+
+    .mobile-menu ul {
+        height: 22rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: start;
+    }
+
 }

@@ -1,6 +1,13 @@
+import { useState } from 'react';
 import '../src/Navbar2.css';
+import { FaHamburger } from 'react-icons/fa';
+
 
 const Navbar2 = () => {
+
+    const [showMenu, setShowMenu] = useState(false);
+
+
     return (
         <>
             <nav>
@@ -8,7 +15,7 @@ const Navbar2 = () => {
                     <h2>Asif Muntasir</h2>
                 </div>
 
-                <div className="menu">
+                <div className={showMenu ? "menu mobile-menu" : "menu"}>
                     <ul>
                         <li>
                             <a href="">Home</a>
@@ -26,6 +33,12 @@ const Navbar2 = () => {
                             <a href="">Log In</a>
                         </li>
                     </ul>
+                </div>
+
+                <div className="ham-menu">
+                    <a href="#" onClick={() => setShowMenu(!showMenu)}>
+                        <FaHamburger />
+                    </a>
                 </div>
             </nav>
         </>
